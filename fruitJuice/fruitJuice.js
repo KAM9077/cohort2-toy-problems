@@ -25,21 +25,8 @@ function Jar() {
   this.banana = 0;
   this.concentration = 0;
   this.totalAmount = 0;
-
 }
 
-/*
-These are some tests:
-var jar = new Jar();
-//jar.getConcentration('apple');//should be 0
-//jar.add(200, 'apple');
-//jar.getTotalAmount(); //should be 200
-//jar.getConcentration('apple'); //should be 1 or 100%
-//jar.add(200, 'banana');
-//jar.getTotalAmount();// should be 400
-//jar.getConcentration('apple'); //should be 0.5 or 50%
-//jar.getConcentration('banana'); //should be 0.5 or 50%
-*/
 Jar.prototype.getConcentration = function(x){
 	return this[x]*100/this.totalAmount;
 }
