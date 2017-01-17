@@ -32,6 +32,7 @@
    // Use two `stack` instances to implement your `queue` Class
    var inbox = new Stack();
    var outbox = new Stack();
+
    // called to add an item to the `queue`
    this.enqueue = function(value){
      inbox.stack.push(value);
