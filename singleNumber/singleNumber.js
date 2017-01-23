@@ -14,7 +14,18 @@ arr = [2,4,3,6,8,2,3,4,8];
 singleNumber(arr);//should return 6 because it only appear once
 */
 function singleNumber(arr){
-
+	var obj = {}
+	for (var i = 0; i < arr.length; i++) {
+		if(obj[arr[i]] === undefined ){
+			obj[arr[i]] = 1;
+		}else
+		obj[arr[i]]++;
+	}
+	for (var key in obj ){
+		if (obj[key] === 1){
+			return Number(key);
+		}
+	}
 }
 
 /*
@@ -32,7 +43,11 @@ twoSum(nums,9); //should return [0,1] because nums[0] + nums[1] = 2 + 7 = 9;
 */
 
 function twoSum(nums, target){
-
+	for (var i = 0; i < nums.length; i++) {
+		if(nums.indexOf(target-nums[i])!==-1){
+			return [i,nums.indexOf(target-nums[i])]
+		}
+	}
 }
 
 /*
@@ -47,5 +62,17 @@ countAllNumbers(2); //should return 91 because there are 91 numbers that have un
 */
 
 function countAllNumbers(n){
-
+	var flag = true;
+	var count = 0;
+	var arr = [];
+	var str = "";
+	for (var i = 0; i < 10**n; i++) {
+		str = String(i)
+		for (var j = 0; j < str.length-1; j++) {
+			if(str.indexOf(str[i]) !== i){
+				count++ 
+				flag = false
+			}
+		}
+	}
 };
