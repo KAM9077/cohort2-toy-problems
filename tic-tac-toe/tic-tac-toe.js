@@ -22,19 +22,9 @@ ticTacToe(solvedBoard);//should return 1
 */
 
 function ticTacToe(board){
-	var x1 = 0;
-	var x2 = 0;
-	var y1 = 0;
-	var y2 = 0;
-	var dx1 = 0;
-	var dy1 = 0;
+	var x1,x2,dx1,y1,y2,dy1;
 	for (var i = 0; i < board.length; i++) {
-		x1 = 0;
-		x2 = 0;
-		y1 = 0;
-		y2 = 0;
-		dx1 = 0;
-		dy1 = 0;
+		x1 = 0, x2 = 0, y1 = 0, y2 = 0, dx1 = 0, dy1 = 0;
 		for (var j = 0; j < board[i].length; j++) {
 			if(board[j][i] === 1)				
 				x1++;
@@ -55,12 +45,7 @@ function ticTacToe(board){
 			return 2
 	}
 
-	// for (var i = 0; i < board.length; i++) {
-	// 	board[i]
-	// }
-	
 	if((x1===0 && y1===0)||(x2===0 && y2===0)){
 		return 0;
 	}else return -1 
-	
 };
