@@ -41,7 +41,7 @@ var rotateMatrix =function (matrix) {
 	var array = [];
 	var arrelment = [];
 	for (var i = 0; i < matrix.length; i++) {
-		for (var j = 0; j < matrix[0].length; j++) {
+		for (var j = matrix[0].length-1 ; j >= 0; j--) {
 			arrelment.push(matrix[j][i])
 		}
 		array.push(arrelment)
