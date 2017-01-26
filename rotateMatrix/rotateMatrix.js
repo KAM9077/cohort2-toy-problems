@@ -37,16 +37,20 @@
  *  - Make your function accept a parameter for the direction of rotation (1 = clockwise, -1 = counterclockwise)
  */
 
-var rotateMatrix =function (matrix) {
-	var array = [];
+var rotateMatrix =function (matrix,direction) {
+	var string = "";
 	var arrelment = [];
-	for (var i = 0; i < matrix.length; i++) {
-		for (var j = matrix[0].length-1 ; j >= 0; j--) {
-			arrelment.push(matrix[j][i])
+	for (var i = 0; i < matrix[0].length; i++) {
+		for (var j = 0 ; j < matrix.length; j++) {
+			if(direction === 1 && matrix[matrix[0].length-j][i] !== undefined){
+				arrelment.push(matrix[matrix.length-j-1][i])
+			}else if(direction === -1 && matrix[j][matrix[0].length-i-1]!== undefined){
+				arrelment.push(matrix[j][matrix.length-i-1])
+			}
 		}
-		array.push(arrelment)
+		string+=JSON.stringify(arrelment)+"\n ";
 		arrelment = [];
+		
 	}
-	return array;
+	return string;
 }
-///////////////////
