@@ -39,6 +39,9 @@ var add2 = function(number){ return number + 2; }
 var multiplyBy3 = function(number){ return number * 3; }
 
 var pipe = function(func1,func2){
+  var x = func1(c);
+  var y = func2(x);
+  return y;  
   
 };
 
