@@ -14,8 +14,12 @@ var binarySearch = function (array, target) {
 	var start = array[0];
 	var end = array[array.length-1];
 	var mid = Math.floor(array.length/2);
-	if(target === array[mid] || target === start || target === end){
-		return true; 
+	if(target === array[mid]){
+		return mid; 
+	}else if(target === start){
+		return 0;
+	}else if(target === end){
+		return array.length-1;
 	}else if(target > array[mid] && array.length !== 1 ){
 		return binarySearch(array.splice(mid,array.length-mid),target);
 	}else if(target < array[mid] && array.length !== 1){
