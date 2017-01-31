@@ -8,9 +8,21 @@
  */
 
 var largestProductOfThree = function(array) {
-	
+	var result = 1;
+	array.sort(function(a,b){return b-a})
+	result = array[0]*array[1]*array[2];
+return result;
 };
 
 
 
 
+// if(array[2]<=0 && array[2]>=0){
+// 		result = array[0]*array[array.length-2]*array[array.length-1];
+// 	}else
+// 		if (array[0]>=0 && array[2] < 0) {
+// 			result = array[0] * array[array.length-2]*array[array.length-1];
+// 		}else 
+// 			if (array[0]<=0) {
+// 				result = array[0]*array[1]*array[2];
+// 			};
