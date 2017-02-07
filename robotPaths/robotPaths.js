@@ -36,10 +36,12 @@ var makeBoard = function(n) {
 //The answer for a board size 5 is 8512 unique paths
 
 var robotPaths = function(myBoard) {
- 
-}
+var paths = [];
+var path = {};
+  while (i=== j && === myBoard.length-1){
 
-      
+  }
+} 
 
 
 
