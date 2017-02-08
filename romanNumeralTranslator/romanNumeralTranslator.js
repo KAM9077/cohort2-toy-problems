@@ -17,6 +17,7 @@
  */
 
 var translateRomanNumeral = function(romanNumeral){
+	var count = 0;
 	var DIGIT_VALUES = {
 	  I: 1,
 	  V: 5,
@@ -26,4 +27,13 @@ var translateRomanNumeral = function(romanNumeral){
 	  D: 500,
 	  M: 1000
 	};
+	count = DIGIT_VALUES[romanNumeral[romanNumeral.length-1]]
+	for (var i = romanNumeral.length-2 ; i >= 0; i--) {
+		if( DIGIT_VALUES[romanNumeral[i]] >= DIGIT_VALUES[romanNumeral[i+1]]){
+			count+=DIGIT_VALUES[romanNumeral[i]]
+		}else{
+			count-=DIGIT_VALUES[romanNumeral[i]]
+		}
+	}
+return count;
 }
