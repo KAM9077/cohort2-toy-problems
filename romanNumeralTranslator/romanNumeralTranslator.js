@@ -17,7 +17,10 @@
  */
 
 var translateRomanNumeral = function(romanNumeral){
+<<<<<<< HEAD
 	var count = 0;
+=======
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
 	var DIGIT_VALUES = {
 	  I: 1,
 	  V: 5,
@@ -27,6 +30,7 @@ var translateRomanNumeral = function(romanNumeral){
 	  D: 500,
 	  M: 1000
 	};
+<<<<<<< HEAD
 	count = DIGIT_VALUES[romanNumeral[romanNumeral.length-1]]
 	for (var i = romanNumeral.length-2 ; i >= 0; i--) {
 		if( DIGIT_VALUES[romanNumeral[i]] >= DIGIT_VALUES[romanNumeral[i+1]]){
@@ -36,4 +40,6 @@ var translateRomanNumeral = function(romanNumeral){
 		}
 	}
 return count;
+=======
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
 }

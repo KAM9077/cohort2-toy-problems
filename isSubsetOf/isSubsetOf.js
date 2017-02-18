@@ -21,6 +21,7 @@
 /*
  * Extra credit: Make the method work for arrays that contain objects and/or arrays as elements.
 */
+<<<<<<< HEAD
 //Without Extra credit
 // Array.prototype.isSubsetOf = function (arr) {
 	// for (var i = 0; i < this.length; i++) {
@@ -46,4 +47,9 @@ Array.prototype.isSubsetOf = function (arr) {
 		if(this.counter === 0){this.flage = false;}
 	}
 	return this.flage;
+=======
+
+Array.prototype.isSubsetOf = function (arr) {
+
+>>>>>>> ec1197ded368e7aad2cc2c29d5059a3905f42645
 }
