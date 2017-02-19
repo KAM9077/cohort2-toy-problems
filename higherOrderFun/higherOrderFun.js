@@ -42,13 +42,13 @@ Please see example usage to understand what should be passed to the callback.
 */
 
 var asyncSum = function(a,b,callback){
-	if(typeof a === "number" && typeof b === "number"){
-	setTimeout(callback(null,a+b), 1000);
-	}else if (typeof a !== "number"){
-		
-		setTimeout(callback (a,a), 1000); 
+	if(typeof a !== "number" || typeof b !== "number"){
+	setTimeout(function(){
+		callback("Incorrect argument(s)")}
+		, 1000);
 	}else {
-		setTimeout(callback (b,b), 1000);
+		setTimeout(function(){
+		callback(null,a+b)}, 1000);
 	}
 
 };
