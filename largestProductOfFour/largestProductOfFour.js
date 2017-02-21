@@ -64,7 +64,7 @@ var largestProductOfFour = function(array) {
 		}		
 	}
 
-	var product= 1;
+	
 	for (var i = 0 ; i < array.length; i++) {
 		for (var j =0 ; j <array.length-3 ; j++) {
 			if(product < array[i][j]*array[i][j+1]*array[i][j+2]*array[i][j+3]){
@@ -76,8 +76,7 @@ var largestProductOfFour = function(array) {
 			}
 		}		
 	}
-
-	var product= 1;
+	
 	for (var i = 0 ; i < array.length-3; i++) {
 		for (var j =0 ; j <array.length ; j++) {
 			if(product < array[i][j]*array[i+1][j]*array[i+2][j]*array[i+3][j]){
@@ -89,7 +88,7 @@ var largestProductOfFour = function(array) {
 			}
 		}		
 	}
-return (a,b,c,d);
+return ([a,b,c,d]);
 }
 
 
