@@ -38,11 +38,69 @@
 
 
 var largestProductOfFour = function(array) {
+	var product= 1;
+	var a,b,c,d;
+	for (var i = 0 ; i < array.length-3; i++) {
+		for (var j =0 ; j <array.length-3 ; j++) {
+			if(product < array[i][j]*array[i+1][j+1]*array[i+2][j+2]*array[i+3][j+3]){
+				product = array[i][j]*array[i+1][j+1]*array[i+2][j+2]*array[i+3][j+3];
+				a = array[i][j];
+				b = array[i+1][j+1];
+				c = array[i+2][j+2];
+				d = array[i+3][j+3];
+			}
+		}		
+	}
 
-};
+	for (var i = 0 ; i < array.length-3; i++) {
+		for (var j = 3 ; j <array.length ; j++) {
+			if(product < array[i][j]*array[i+1][j-1]*array[i+2][j-2]*array[i+3][j-3]){
+				product = array[i][j]*array[i+1][j-1]*array[i+2][j-2]*array[i+3][j-3];
+				a = array[i][j];
+				b = array[i+1][j-1];
+				c = array[i+2][j-2];
+				d = array[i+3][j-3];
+			}
+		}		
+	}
+
+	var product= 1;
+	for (var i = 0 ; i < array.length; i++) {
+		for (var j =0 ; j <array.length-3 ; j++) {
+			if(product < array[i][j]*array[i][j+1]*array[i][j+2]*array[i][j+3]){
+				product = array[i][j]*array[i][j+1]*array[i][j+2]*array[i][j+3];
+				a = array[i][j];
+				b = array[i][j+1];
+				c = array[i][j+2];
+				d = array[i][j+3];
+			}
+		}		
+	}
+
+	var product= 1;
+	for (var i = 0 ; i < array.length-3; i++) {
+		for (var j =0 ; j <array.length ; j++) {
+			if(product < array[i][j]*array[i+1][j]*array[i+2][j]*array[i+3][j]){
+				product = array[i][j]*array[i+1][j]*array[i+2][j]*array[i+3][j];
+				a = array[i][j];
+				b = array[i+1][j];
+				c = array[i+2][j];
+				d = array[i+3][j];
+			}
+		}		
+	}
+return (a,b,c,d);
+}
 
 
-
+// [
+// 	[1,2,3,1,2,3],
+// 	[1,2,1,0,0,0],
+// 	[1,1,1,1,1,1],
+// 	[2,2,2,2,2,2],
+// 	[1,1,1,1,1,1],
+// 	[5,4,6,8,9,7]
+// ]
 
 
 

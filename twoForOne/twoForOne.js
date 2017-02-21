@@ -15,14 +15,10 @@ abc(); // should return 'a' again on this fourth call
 
 
 function makeLooper(string){
-	this.counter = -1;
+	return function(){
 
-}
-
-this.prototype.invoc = function(){
-		this.counter++;
-		return string[this.counter%string.length]
 	}
+};
 
 
 /*
@@ -60,6 +56,7 @@ pyramid(1666); // should === 16
 function pyramid(cans){
 	var counter = 1;
 	while(cans >= counter**2 ){
+
 		cans-=counter**2;
 		counter++;
 	}

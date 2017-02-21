@@ -12,10 +12,11 @@ See example usage to understand what arguments are passed to the callback.
 */
 
 Array.prototype.map = function(callback){
-	for (var i = 0 - 1; i < Things.length; i++) {
-		
+	var arr=[]
+	for (var i = 0 ; i < this.length; i++) {
+		arr.push(callback(this[i],i,this))
 	};
-
+	return arr;
 }
 
 /*
